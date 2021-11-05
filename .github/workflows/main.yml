@@ -28,6 +28,7 @@ jobs:
         with:
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             known_hosts: ${{ secrets.KNOWN_HOSTS }}
+            expect: $ {{ secrets.PASS_PHRASE }}
       # Clone vogsphere git repository
       - name: Clones vogsphere git repository
         run: cd .. && git clone ${{ secrets.VOGSPHERE_REPO }}
