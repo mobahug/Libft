@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 10:51:55 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/05 09:32:55 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/05 10:05:42 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/05 10:56:44 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *s1, const char *s2, size_t n)
+void	*ft_memset(void *dest, int value, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	result;
+	unsigned char	*p;
 
-	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	result = 0;
-	while (s2[result] != '\0')
-		result++;
-	if (n <= i)
-		result = result + n;
-	else
-		result = result + i;
-	j = 0;
-	while (s2[j] != '\0' && i + 1 < n)
+	p = dest;
+	while (0 < n)
 	{
-		s1[i] = s2[j];
-		i++;
-		j++;
+		*p = value;
+		p++;
+		n--;
 	}
-	s1[i] = '\0';
-	return (result);
+	return (dest);
 }

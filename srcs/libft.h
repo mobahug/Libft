@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/04 13:36:24 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/05 11:05:12 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strnstr(const char *str, const char *searchString, size_t len);
 char	*ft_strstr(const char *str, const char *searchString);
 
+void	*ft_memset(void *dest, int value, size_t n);
+void	ft_bzero(void *start, size_t n);
 #endif
