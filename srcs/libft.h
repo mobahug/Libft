@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/05 13:01:46 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/05 17:16:05 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 # include <string.h>
 
 int		ft_atoi(const char *str);
+void	ft_bzero(void *start, size_t n);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memset(void *dest, int value, size_t n);
 char	*ft_strcat(char *s1, const char *s2);
 char	*strchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);
@@ -27,9 +35,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strnstr(const char *str, const char *searchString, size_t len);
 char	*ft_strstr(const char *str, const char *searchString);
-
-void	*ft_memset(void *dest, int value, size_t n);
-void	ft_bzero(void *start, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
