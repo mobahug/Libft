@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 12:38:34 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/08 14:04:54 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/08 14:14:33 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/08 15:06:48 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*s1;
+	int		lenght;
 
+	lenght = ft_strlen(s) - 1;
 	s1 = (char *)s;
-	while (*s1 != c)
+	while (lenght >= 0)
 	{
-		if (*s1 == '\0')
-			return (0);
-		s1++;
+		if (s1[lenght] == c)
+			return (&(s1[lenght]));
+		lenght--;
 	}
-	return (s1);
-}
-
-int	main()
-{
-	const char	s1[100] = "How are you Gabor?";
-	const char	s2 = 'G';
-
-	char *ptr;
-
-	ptr = strchr(s1, s2);
-	printf("String starting from %c is: %s", s2, ptr);
 	return (0);
-
-
 }
