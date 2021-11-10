@@ -6,12 +6,11 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 07:38:44 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/09 09:12:00 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:08:33 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

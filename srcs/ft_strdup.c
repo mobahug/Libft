@@ -6,11 +6,10 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:38:46 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/04 11:23:16 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:08:17 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *src)
