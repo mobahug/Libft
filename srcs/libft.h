@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/10 15:08:10 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:36:38 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void	ft_striter(char *s, void	(*f)(char *));
 void	ft_striteri(char *s, void	(*f)(unsigned int, char *));
 size_t	ft_strlcat(char *s1, const char *s2, size_t n);
 int		ft_strlen(const char *str);
+char	*ft_strmap(char const *s, char	(*f)(char));
+char	*ft_strmapi(char const *s, char	(*f)(unsigned int, char));
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);

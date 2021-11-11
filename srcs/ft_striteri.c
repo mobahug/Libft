@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 09:30:21 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/10 15:08:14 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:46:05 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void	(*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
-	if (*s != NULL || *f != NULL)
+	if (s != NULL || f != NULL)
 	{
 		while (s[i] != '\0')
 		{
