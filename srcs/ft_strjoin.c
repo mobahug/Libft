@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 09:07:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/12 15:56:26 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/12 14:19:38 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/12 15:56:22 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*ptr;
+	char	*result;
 
-	ptr = (char *)malloc(sizeof(char) * size + 1);
-	if (ptr == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	ft_strclr(ptr);
-	return (0);
+	result = malloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
+	if (result)
+	{
+		ft_strcpy(result, s1);
+		ft_strcat(result, s2);
+	}
+	return (result);
 }

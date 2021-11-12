@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/12 09:10:45 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/12 15:58:37 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+char	*ft_itoa(int n);
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
@@ -49,6 +50,7 @@ char	*ft_strdup(const char *src);
 int		ft_strequ(char const *s1, char const *s2);
 void	ft_striter(char *s, void	(*f)(char *));
 void	ft_striteri(char *s, void	(*f)(unsigned int, char *));
+char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *s1, const char *s2, size_t n);
 int		ft_strlen(const char *str);
 char	*ft_strmap(char const *s, char	(*f)(char));
@@ -60,6 +62,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(const char *str, const char *searchString, size_t len);
 char	*ft_strrchr(const char *s, int c);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *str, const char *searchString);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
