@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 07:19:09 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/10 15:08:35 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/12 10:39:16 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memalloc(size_t size)
 {
 	void	*ptr;
 
-	ptr = (void *)malloc(sizeof(*ptr) * size);
+	ptr = malloc(size);
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, size);
