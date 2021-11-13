@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/12 15:58:37 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/13 08:22:45 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ char	*ft_strnstr(const char *str, const char *searchString, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *str, const char *searchString);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 

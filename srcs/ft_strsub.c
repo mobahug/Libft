@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 12:59:46 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/13 09:21:28 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/13 08:21:39 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/13 09:19:09 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *searchString, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
+	char	*sub_string;
 	size_t	i;
-	size_t	j;
-	char	*s;
 
 	i = 0;
-	j = 0;
-	s = (char *)str;
-	if (*searchString == '\0')
-		return (s);
-	while (s[i] != '\0')
+	sub_string = (char *)malloc(sizeof(char) * (len + 1));
+	if (s == NULL || sub_string == NULL)
+		return (NULL);
+	while (i < len && s[start])
 	{
-		j = 0;
-		while (s[i + j] == searchString[j] && s[i + j] != '\0' && (j + i) < len)
-		{
-			if (searchString[j + 1] == '\0')
-				return (&s[i]);
-			j++;
-		}
+		sub_string[i] = s[start];
+		start++;
 		i++;
 	}
-	return (0);
+	sub_string[i] = '\0';
+	return (sub_string);
 }

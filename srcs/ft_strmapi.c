@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strmappi.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 12:59:46 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/13 09:21:28 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/11 14:35:59 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/11 14:46:02 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *searchString, size_t len)
+char	*ft_strmapi(char const *s, char	(*f)(unsigned int, char))
 {
-	size_t	i;
-	size_t	j;
-	char	*s;
+	int		i;
+	char	*str;
 
-	i = 0;
-	j = 0;
-	s = (char *)str;
-	if (*searchString == '\0')
-		return (s);
-	while (s[i] != '\0')
+	str = (char *)malloc(sizeof(ft_strlen(s) + 1));
+	if (s != NULL || f != NULL)
 	{
-		j = 0;
-		while (s[i + j] == searchString[j] && s[i + j] != '\0' && (j + i) < len)
+		i = 0;
+		while (s[i] != '\0')
 		{
-			if (searchString[j + 1] == '\0')
-				return (&s[i]);
-			j++;
+			str[i] = (*f)(i, s[i]);
+			i++;
 		}
-		i++;
+		str[i] = '\0';
 	}
-	return (0);
+	return (str);
 }

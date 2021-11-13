@@ -6,12 +6,12 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:11:50 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/12 15:57:51 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/13 09:20:50 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 char	**ft_strsplit(char const *s, char c)
 {
 	int		index;
@@ -43,7 +43,8 @@ char	**ft_strsplit(char const *s, char c)
 		if (s_s[count] = c)
 			count++;
 	}
-	//ft_strlen(s_s);
-	//*ptr = (char *)ft_strnew(sizeof(*s_s));
+	ft_strlen(s_s);
+	*ptr = (char *)ft_strnew(sizeof(*s_s));
 
 }
+*/

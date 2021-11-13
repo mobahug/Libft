@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 08:34:29 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/10 15:08:16 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/13 09:17:59 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striter(char *s, void	(*f)(char *))
 		i = 0;
 		while (s[i] != '\0')
 		{
-			(*f)(s[i]);
+			(*f)(&s[i]);
 			i++;
 		}
 	}
