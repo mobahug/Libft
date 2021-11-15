@@ -6,35 +6,35 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:51:55 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/05 09:32:55 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/15 14:26:25 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *s1, const char *s2, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	result;
 
 	i = 0;
-	while (s1[i] != '\0')
+	while (dst[i] != '\0')
 		i++;
 	result = 0;
-	while (s2[result] != '\0')
+	while (src[result] != '\0')
 		result++;
-	if (n <= i)
-		result = result + n;
+	if (dstsize <= i)
+		result = result + dstsize;
 	else
 		result = result + i;
 	j = 0;
-	while (s2[j] != '\0' && i + 1 < n)
+	while (src[j] != '\0' && i + 1 < dstsize)
 	{
-		s1[i] = s2[j];
+		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	s1[i] = '\0';
+	dst[i] = '\0';
 	return (result);
 }

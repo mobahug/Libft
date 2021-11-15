@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:11:50 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/13 09:20:50 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:04:22 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	ft_strlen(s_s);
 	*ptr = (char *)ft_strnew(sizeof(*s_s));
+
+}
+
+char	**ft_strsplit(char const *s, char c)
+{
 
 }
 */

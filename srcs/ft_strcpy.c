@@ -6,23 +6,23 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:08:33 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/04 11:23:20 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:02:58 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char	*start;
 
-	start = dest;
+	start = dst;
 	while (*src != '\0')
 	{
-		*dest = *src;
-		dest++;
+		*dst = *src;
+		dst++;
 		src++;
 	}
-	*dest = '\0';
+	*dst = '\0';
 	return (start);
 }

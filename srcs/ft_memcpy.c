@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:59:18 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/05 15:37:23 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:16:50 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	dst2 = (unsigned char *)dst;
 	src2 = (unsigned char *)src;
-	if (*dst2 == 0 && *src2 == 0)
+	if (dst2 == 0 && src2 == 0)
 		return (0);
 	i = 0;
 	while (i < n)
