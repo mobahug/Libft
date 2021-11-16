@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:22:13 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/15 14:32:30 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:09:42 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 void	ft_putnbr(int n)
 {
+	if (n == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		n = 147483648;
+	}
 	if (n < 0)
 	{
 		ft_putchar('-');

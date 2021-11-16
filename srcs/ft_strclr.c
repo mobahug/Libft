@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 08:02:53 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/15 09:09:43 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/16 10:10:09 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_strclr(char *s)
 {
 	int	index;
 
-	index = 0;
-	while (s[index] != '\0')
+	if (s != 0)
 	{
-		s[index] = '\0';
-		index++;
+		index = 0;
+		while (s[index] != '\0')
+		{
+			s[index] = '\0';
+			index++;
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:07:10 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/10 15:08:27 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:15:43 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s != 0)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }

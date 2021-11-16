@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 08:21:39 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/15 14:57:47 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/16 12:04:27 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	sub_string = (char *)malloc(sizeof(char) * (len + 1));
 	if (s == 0 || sub_string == 0)
 		return (0);
-	while (i < len && s[start])
+	if (start >= len)
+		return (sub_string);
+	while (i < len && s[start] != '\0')
 	{
 		sub_string[i] = s[start];
 		start++;

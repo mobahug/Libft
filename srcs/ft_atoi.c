@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:26:26 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/15 13:51:22 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/16 09:56:15 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int	ft_atoi(const char *str)
 	if (str[i] == 0)
 		return (0);
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-	{
 		i++;
-	}
 	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
 			sign = -1;
