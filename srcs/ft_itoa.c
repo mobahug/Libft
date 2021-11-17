@@ -6,53 +6,53 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 12:44:45 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/17 09:53:34 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/17 12:15:21 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	number(int n)
+int	number_lenght(long nb)
 {
-	if (n < 0)
+	int	counter;
+
+	counter = 0;
+	if (nb < 0)
 	{
-		//ft_putchar('-');
-		n *= -1;
+		nb = nb * -1;
+		counter++;
 	}
-	if (n > 9)
-		number(n / 10);
-	//ft_putchar(n % 10 + 48);
-	return (n);
+	while (nb > 0)
+	{
+		nb = nb / 10;
+		counter++;
+	}
+	return (counter);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
+	long	num;
 	int		i;
 
-	i = number(n);
-	str = (char *)malloc(sizeof(char) * number(n) + 1);
+	num = n;
+	i = number_lenght(num);
+	if (num == 0)
+		return (ft_strdup("0"));
+	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (str == 0)
 		return (0);
 	str[i--] = '\0';
-	if (n < 0)
+	if (num < 0)
 	{
-		write(1, "-", 1);
-		n *= -1;
+		str[0] = '-';
+		num = num * -1;
 	}
-	if (n == 0)
+	while (num > 0)
 	{
-		str[0] = 48;
-		return (str);
-	}
-	while (n > 0)
-	{
-		str[i--] = 48 + (n % 10);
-		//result = (result * 10) + (str[i++] - '0');
-		n = n / 10;
+		str[i--] = 48 + (num % 10);
+		num = num / 10;
 	}
 	return (str);
 }
-
-
