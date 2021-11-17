@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/16 12:04:53 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/17 13:36:57 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char	*ft_strrchr(const char *s, int c);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
