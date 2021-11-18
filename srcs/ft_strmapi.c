@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 14:35:59 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/16 16:49:10 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/18 12:35:47 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char	(*f)(unsigned int, char))
 	int		i;
 	char	*str;
 
+	if (s == 0)
+		return (0);
 	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (s == 0 || str == 0)
 		return (0);
