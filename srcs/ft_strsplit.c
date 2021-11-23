@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:16:16 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/23 14:50:21 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:52:49 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	**ft_get_words(char *s, char c, size_t word_counter)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**words;
 	char	*line;
