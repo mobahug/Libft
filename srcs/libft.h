@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/18 11:57:53 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/23 07:40:27 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef	struct		s_list
+{
+	void			*content;
+	size_t			*content_size;
+	struct	s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -25,6 +32,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_isspace(char c);
 char	*ft_itoa(int n);
+void	ft_lstdelone(t_list **alst, void	(*del)(void*, size_t));
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);

@@ -6,7 +6,7 @@
 #    By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 08:40:43 by ghorvath          #+#    #+#              #
-#    Updated: 2021/11/18 12:36:12 by ghorvath         ###   ########.fr        #
+#    Updated: 2021/11/23 07:49:23 by ghorvath         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS	=	ft_atoi.c		ft_bzero.c		ft_isalnum.c	ft_isalpha.c	\
 			ft_strncmp.c	ft_strncpy.c	ft_strnequ.c	ft_strnew.c		\
 			ft_strnstr.c	ft_strrchr.c	ft_strsplit.c	ft_strstr.c		\
 			ft_strsub.c		ft_strtrim.c	ft_tolower.c	ft_toupper.c	\
-			ft_isspace.c
+			ft_isspace.c	ft_lstdel.c		ft_lstdelone.c
 
 OBJECTS	=	ft_atoi.o		ft_bzero.o		ft_isalnum.o	ft_isalpha.o	\
 			ft_isascii.o	ft_isdigit.o	ft_isprint.o	ft_itoa.o		\
@@ -41,7 +41,7 @@ OBJECTS	=	ft_atoi.o		ft_bzero.o		ft_isalnum.o	ft_isalpha.o	\
 			ft_strncmp.o	ft_strncpy.o	ft_strnequ.o	ft_strnew.o		\
 			ft_strnstr.o	ft_strrchr.o	ft_strsplit.o	ft_strstr.o		\
 			ft_strsub.o		ft_strtrim.o	ft_tolower.o	ft_toupper.o	\
-			ft_isspace.o
+			ft_isspace.o	ft_lstdel.o		ft_lstdelone.o
 
 HEADER	=	-c	-I	libft.h
 
