@@ -6,39 +6,13 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:16:16 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/24 11:29:01 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:41:27 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countwords(char const *s, char c)
-{
-	size_t	words;
-
-	words = 0;
-	while (*s != '\0')
-	{
-		while (*s == c)
-			s++;
-		if (*s != '\0')
-		{
-			words++;
-			while (*s != '\0' && *s != c)
-				s++;
-		}
-	}
-	return (words);
-}
-
-void	ft_free_words(char **words, size_t i)
-{
-	while (i--)
-		ft_strdel(&(words[i]));
-	free(*words);
-}
-
-char	*ft_get_word(char *word, char c, char **words, size_t i)
+static char	*ft_get_word(char *word, char c, char **words, size_t i)
 {
 	char	*start;
 	char	*result;
@@ -56,7 +30,7 @@ char	*ft_get_word(char *word, char c, char **words, size_t i)
 	return (result);
 }
 
-char	**ft_get_words(char *s, char c, size_t word_counter)
+static char	**ft_get_words(char *s, char c, size_t word_counter)
 {
 	char	**words;
 	char	*word;

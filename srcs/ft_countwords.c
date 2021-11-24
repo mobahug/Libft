@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 12:44:45 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/24 12:49:28 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/24 12:30:11 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/24 12:41:40 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+size_t	ft_countwords(char const *s, char c)
 {
-	char	*str;
-	long	num;
-	int		i;
+	size_t	words;
 
-	num = n;
-	i = ft_number_lenght(num);
-	if (num == 0)
-		return (ft_strdup("0"));
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	if (str == 0)
-		return (0);
-	str[i--] = '\0';
-	if (num < 0)
+	words = 0;
+	while (*s != '\0')
 	{
-		str[0] = '-';
-		num = num * -1;
+		while (*s == c)
+			s++;
+		if (*s != '\0')
+		{
+			words++;
+			while (*s != '\0' && *s != c)
+				s++;
+		}
 	}
-	while (num > 0)
-	{
-		str[i--] = 48 + (num % 10);
-		num = num / 10;
-	}
-	return (str);
+	return (words);
 }
