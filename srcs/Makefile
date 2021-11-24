@@ -6,7 +6,7 @@
 #    By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/13 08:40:43 by ghorvath          #+#    #+#              #
-#    Updated: 2021/11/24 12:48:39 by ghorvath         ###   ########.fr        #
+#    Updated: 2021/11/24 15:46:06 by ghorvath         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS	=	ft_atoi.c		ft_bzero.c		ft_isalnum.c	ft_isalpha.c	\
 			ft_strnstr.c	ft_strrchr.c	ft_strsplit.c	ft_strstr.c		\
 			ft_strsub.c		ft_strtrim.c	ft_tolower.c	ft_toupper.c	\
 			ft_isspace.c	ft_lstdel.c		ft_lstdelone.c	ft_countwords.c	\
-			ft_free_words.c	ft_number_lenght.c
+			ft_free_words.c	ft_number_lenght.c	ft_lstadd.c	ft_lstiter.c	\
+			ft_lstmap.c
 
 OBJECTS	=	ft_atoi.o		ft_bzero.o		ft_isalnum.o	ft_isalpha.o	\
 			ft_isascii.o	ft_isdigit.o	ft_isprint.o	ft_itoa.o		\
@@ -43,7 +44,8 @@ OBJECTS	=	ft_atoi.o		ft_bzero.o		ft_isalnum.o	ft_isalpha.o	\
 			ft_strnstr.o	ft_strrchr.o	ft_strsplit.o	ft_strstr.o		\
 			ft_strsub.o		ft_strtrim.o	ft_tolower.o	ft_toupper.o	\
 			ft_isspace.o	ft_lstdel.o		ft_lstdelone.o	ft_countwords.o	\
-			ft_free_words.o	ft_number_lenght.o
+			ft_free_words.o	ft_number_lenght.o	ft_lstadd.o	ft_lstiter.o	\
+			ft_lstmap.o
 
 
 HEADER	=	-c	-I	libft.h

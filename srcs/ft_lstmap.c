@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 07:20:59 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/24 15:06:11 by ghorvath         ###   ########.fr       */
+/*   Created: 2021/11/24 15:08:02 by ghorvath          #+#    #+#             */
+/*   Updated: 2021/11/24 15:46:46 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void	(*del)(void*, size_t))
+t_list	*ft_lstmap(t_list *lst, t_list	*(*f)(t_list *elem))
 {
-	t_list	*temp;
-	t_list	*list;
+	t_list	*str;
 
-	list = *alst;
-	while (list != NULL)
+	if (!lst)
+		return (0);
+	str = (char *)malloc(sizeof(char) * ft_strlen(lst) + 1);
+	if (!str || !lst)
+		return (NULL);
+	while (lst)
 	{
-		temp = list->next;
-		del(list->content, list->content_size);
-		free(list);
-		list = temp;
+		*str = *(*f)(lst);
+		lst = lst->next;
+		lst++;
 	}
-	*alst = NULL;
+	*str = '\0';
+	return (str);
 }
