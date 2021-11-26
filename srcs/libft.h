@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:02:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/24 15:45:26 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:02:09 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	ft_lstdel(t_list **alst, void	(*del) (void*, size_t));
 void	ft_lstdelone(t_list **alst, void	(*del) (void*, size_t));
 void	ft_lstiter(t_list *lst, void	(*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list	*(*f)(t_list *elem));
+t_list	*ft_lstnew(void const *content, size_t content_size);
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
