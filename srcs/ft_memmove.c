@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 09:04:51 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/15 11:27:49 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/29 07:29:45 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len--)
 			dest[len] = source[len];
-		return (dest);
+		return ((unsigned char *)dst);
 	}
 	else if (source > dest)
 	{
@@ -35,7 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dest++;
 			source++;
 		}
-		return (dest);
+		return ((unsigned char *)dst);
 	}
 	return (0);
 }

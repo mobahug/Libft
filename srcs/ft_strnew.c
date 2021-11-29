@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 09:07:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/11/16 12:00:02 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/11/29 08:56:36 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 char	*ft_strnew(size_t size)
 {
 	char	*ptr;
+	size_t	i;
 
 	ptr = (char *)malloc(sizeof(char) * size + 1);
 	if (ptr == 0)
 		return (0);
-	ft_strclr(ptr);
+	i = 0;
+	while (i <= size)
+		ptr[i++] = 0;
 	return (ptr);
 }
